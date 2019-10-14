@@ -20,7 +20,6 @@ const init = {
 };
 
 function products(state = init, action) {
-	console.log(action);
 	switch (action.type) {
 		case 'TOGGLE':
 			const { id } = action.payload;

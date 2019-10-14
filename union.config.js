@@ -3,6 +3,7 @@ module.exports = options => {
 	const { script } = options;
 	return {
 		mergeWebpackConfig: config => {
+			console.log(config);
 			config.optimization = {};
 			// needs to match the theme directory
 			if (script === 'build') {

@@ -7,17 +7,16 @@
     "node": ">=8"
   },
   "dependencies": {
+    "@skytv/store": "*",
+    "@skytv/widget-cart": "^0.14.0",
     "@skytv/widget-content": "^0.14.0",
     "@skytv/widget-counter": "^0.14.0",
     "@skytv/widget-hero": "^0.14.0",
-    "@skytv/widget-cart": "^0.14.0",
     "@skytv/widget-products": "^0.14.0",
-    "@skytv/store":"*",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^7.1.1",
     "react-union": "^0.14.1",
-    "react-universal-component": "^4.0.0",
-    "redux": "^4.0.4"
+    "react-universal-component": "^4.0.0"
   }
 }
