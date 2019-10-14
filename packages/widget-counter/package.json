@@ -1,0 +1,16 @@
+{
+  "name": "@union-monorepo/widget-counter",
+  "version": "0.14.0",
+  "private": true,
+  "license": "MIT",
+  "main": "src/index.js",
+  "repository": "https://github.com/lundegaard/react-union",
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^7.1.1"
+  }
+}
