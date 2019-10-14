@@ -1,6 +1,6 @@
 {
-  "name": "@skytv/widget-hero",
-  "version": "0.14.0",
+  "name": "@skytv/store",
+  "version": "0.0.1",
   "private": true,
   "license": "MIT",
   "main": "src/index.js",
@@ -9,9 +9,8 @@
   },
   "dependencies": {
     "react": "^16.8.3",
-    "react-dom": "^16.8.3"
-  },
-  "devDependencies": {
-    "enzyme": "^3.8.0"
+    "react-dom": "^16.8.3",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6"
   }
 }

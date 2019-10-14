@@ -1,9 +1,8 @@
 {
-  "name": "react-union-boilerplate-monorepo",
+  "name": "react-union-monorepo",
   "version": "0.14.2",
   "private": true,
   "license": "MIT",
-  "repository": "https://github.com/lundegaard/react-union",
   "engines": {
     "node": ">=8"
   },
@@ -30,7 +29,7 @@
     "react-union-scripts": "^0.14.1"
   },
   "scripts": {
-    "build": "react-union-scripts build --no-hmr",
+    "build": "react-union-scripts build --app app-sample --release",
     "start": "react-union-scripts start --app app-sample",
     "test": "react-union-scripts test",
     "lint": "yarn lint:eslint",

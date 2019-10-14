@@ -1,10 +1,9 @@
 {
-  "name": "@union-monorepo/widget-counter",
+  "name": "@skytv/widget-counter",
   "version": "0.14.0",
   "private": true,
   "license": "MIT",
   "main": "src/index.js",
-  "repository": "https://github.com/lundegaard/react-union",
   "engines": {
     "node": ">=8"
   },

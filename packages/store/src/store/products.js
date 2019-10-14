@@ -24,7 +24,10 @@ function products(state = init, action) {
 	switch (action.type) {
 		case 'TOGGLE':
 			const { id } = action.payload;
-			return { ...state, [id]: { ...state[id], selected: !state[id].selected } };
+			return {
+				...state,
+				[id]: { ...state[id], selected: !state[id].selected },
+			};
 		default:
 			return state;
 	}

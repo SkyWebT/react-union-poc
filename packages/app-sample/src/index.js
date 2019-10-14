@@ -1,9 +1,9 @@
-import '@babel/polyfill';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { justRender } from 'react-union';
+import createStore from '@skytv/store';
+
 import Root from './components/Root';
-import createStore from './store';
 
 const store = createStore();
 
@@ -13,8 +13,8 @@ const app = (
 	</Provider>
 );
 
-if (!'Liferay' in window) {
-	AUI().ready(
+if ('Liferay' in window) {
+	window.AUI().ready(
 		/*
           This function gets loaded when all the HTML, not including the portlets, is
           loaded.
@@ -25,10 +25,10 @@ if (!'Liferay' in window) {
 		}
 	);
 
-	Liferay.Portlet.ready(
+	window.Liferay.Portlet.ready(
 		/*
           This function gets loaded after each and every portlet on the page.
-      
+
           portletId: the current portlet's id
           node: the Alloy Node object of the current portlet
           */
@@ -36,7 +36,7 @@ if (!'Liferay' in window) {
 		function(portletId, node) {}
 	);
 
-	Liferay.on(
+	window.Liferay.on(
 		'allPortletsReady',
 
 		/*
