@@ -1,6 +1,6 @@
 {
   "name": "@skytv/widget-counter",
-  "version": "0.14.0",
+  "version": "0.0.1",
   "private": true,
   "license": "MIT",
   "main": "src/index.js",

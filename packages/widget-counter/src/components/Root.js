@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React from 'react';
-import {actions } from '@skytv/store'
+import { actions } from '@skytv/store';
+
 const Root = () => {
-	const {counter} = useSelector(s => s.counter);
-	console.log(counter)
+	const { counter } = useSelector(s => s.counter);
+	console.log(counter);
 	const d = useDispatch();
 	const inc = () => {
 		d(actions.counter.increment());

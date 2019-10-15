@@ -1,1 +1,1 @@
-export { create ,actions} from './store';
+export { create, actions } from './store';
