@@ -4,6 +4,10 @@ import logger from 'redux-logger';
 import products from './products';
 import counter from './counter';
 
-const reducers = combineReducers({ counter, products });
+const reducers = combineReducers({ counter: counter.reducer, products });
 
-export default () => createStore(reducers, applyMiddleware(logger));
+export const create = () => createStore(reducers, applyMiddleware(logger));
+
+export const actions = {
+	counter: counter.actions,
+};

@@ -1,14 +1,15 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React from 'react';
-
+import {actions } from '@skytv/store'
 const Root = () => {
-	const counter = useSelector(s => s.counter);
+	const {counter} = useSelector(s => s.counter);
+	console.log(counter)
 	const d = useDispatch();
 	const inc = () => {
-		d({ type: 'INCREMENT' });
+		d(actions.counter.increment());
 	};
 	const dec = () => {
-		d({ type: 'DECREMENT' });
+		d(actions.counter.decrement());
 	};
 	return (
 		<div style={{ border: '1px solid grey', margin: 20, padding: 20 }}>

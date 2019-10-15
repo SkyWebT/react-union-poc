@@ -1,12 +1,23 @@
-function counter(state = 999, action) {
-	switch (action.type) {
-		case 'INCREMENT':
-			return state + 1;
-		case 'DECREMENT':
-			return state - 1;
-		default:
-			return state;
-	}
-}
+import { createActions, handleActions, combineActions } from 'redux-actions';
 
-export default counter;
+const defaultState = { counter: 10 };
+
+export const actions = createActions({
+	INCREMENT: (amount = 1) => ({ amount }),
+	DECREMENT: (amount = 1) => ({ amount: -amount }),
+});
+const { increment, decrement } = actions;
+
+export const reducer = handleActions(
+	{
+		[combineActions(increment, decrement)]: (state, { payload: { amount } }) => {
+			return { ...state, counter: state.counter + amount };
+		},
+	},
+	defaultState
+);
+
+export default {
+	reducer,
+	actions,
+};

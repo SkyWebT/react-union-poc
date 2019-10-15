@@ -2,7 +2,7 @@ const init = {
 	'1': {
 		id: '1',
 		name: 'SKY Starter',
-		price: 25,
+		price: 125,
 		selected: false,
 	},
 	'2': {

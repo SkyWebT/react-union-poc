@@ -1,11 +1,11 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { justRender } from 'react-union';
-import createStore from '@skytv/store';
+import { create } from '@skytv/store';
 
 import Root from './components/Root';
 
-const store = createStore();
+const store = create();
 
 const app = (
 	<Provider store={store}>
