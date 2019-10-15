@@ -1,0 +1,7 @@
+diff a/packages/store/src/store/counter.js b/packages/store/src/store/counter.js	(rejected hunks)
+@@ -5 +5 @@ const defaultState = { counter: 10 };
+- const actions = createActions({
++const actions = createActions({
+@@ -11 +11 @@ const { increment, decrement } = actions;
+- const reducer = handleActions(
++const reducer = handleActions(
