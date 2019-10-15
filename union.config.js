@@ -1,22 +1,27 @@
 module.exports = options => {
-	console.log(options);
-	const { script } = options;
-	return {
-		mergeWebpackConfig: config => {
-			console.log(config);
-			config.optimization = {};
-			// needs to match the theme directory
-			if (script === 'build') {
-				config.output.publicPath = '/o/nick-react-union-theme/';
-			}
-			config.output.filename = 'js/[name].js';
-			config.output.chunkFilename = 'js/[name].chunk.js';
-			return config;
-		},
+  console.log(options);
+  const { script } = options;
+  return {
+    mergeWebpackConfig: config => {
+      console.log(config.module.rules[0]);
+      // config ts
+      config.module.rules[0].test = /\.(js|ts)x?$/;
+      config.resolve = { extensions: ['.js', '.ts', '.tsx'] };
+      // bundle into one js file
+      config.optimization = {};
+      // needs to match the theme directory
 
-		workspaces: {
-			widgetPattern: 'widget',
-			appPattern: 'app',
-		},
-	};
+      config.output.filename = 'js/[name].js';
+      config.output.chunkFilename = 'js/[name].chunk.js';
+      if (script === 'build') {
+        config.output.publicPath = '/o/nick-react-union-theme/';
+      }
+      return config;
+    },
+
+    workspaces: {
+      widgetPattern: 'widget',
+      appPattern: 'app',
+    },
+  };
 };
