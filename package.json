@@ -31,8 +31,8 @@
     "react-union-scripts": "^0.14.1"
   },
   "scripts": {
-    "build": "react-union-scripts build --app app-sample --release",
-    "start": "react-union-scripts start --app app-sample",
+    "build": "react-union-scripts build --app app --release",
+    "start": "react-union-scripts start --app app",
     "test": "react-union-scripts test",
     "lint": "yarn lint:eslint",
     "lint:eslint": "eslint --ext .js ./"
