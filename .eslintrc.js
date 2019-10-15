@@ -1,4 +1,20 @@
 module.exports = {
 	root: true,
-	extends: ['react-union'],
+	plugins: ['prettier', 'react'],
+	rules: {
+		'prettier/prettier': 'error',
+	},
+	parser: 'babel-eslint',
+	parserOptions: {
+		ecmaFeatures: {
+			jsx: true,
+			modules: true,
+		},
+	},
+	env: {
+		browser: true,
+		node: true,
+		jest: true,
+	},
+	extends: ['eslint:recommended', 'plugin:react/recommended'],
 };

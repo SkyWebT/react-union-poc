@@ -3617,11 +3617,6 @@ eslint-config-prettier@^6.4.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-config-react-union@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-react-union/-/eslint-config-react-union-0.14.0.tgz#3d3dff80060627ba4ced9574144f5741a011a71a"
-  integrity sha512-g52QIf8ntCAzfvp1Foh12wkOuodzO4OC6JSYZ12MYSh5mUXzNoZ9hGhLsZhX9TNd6T7O3RR1BjpQKdpxOUgPMw==
-
 eslint-import-resolver-node@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.2.tgz#58f15fb839b8d0576ca980413476aab2472db66a"

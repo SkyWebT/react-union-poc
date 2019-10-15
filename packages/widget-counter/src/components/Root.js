@@ -4,7 +4,6 @@ import { actions } from '@skytv/store';
 
 const Root = () => {
 	const { counter } = useSelector(s => s.counter);
-	console.log(counter);
 	const d = useDispatch();
 	const inc = () => {
 		d(actions.counter.increment());

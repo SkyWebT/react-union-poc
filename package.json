@@ -37,7 +37,7 @@
         "start": "react-union-scripts start --app app",
         "test": "react-union-scripts test",
         "lint": "yarn lint:eslint",
-        "lint:eslint": "eslint --ext .js ./"
+        "lint:eslint": "eslint --ext .js ./packages"
     },
     "lint-staged": {
         "**/*.js": [

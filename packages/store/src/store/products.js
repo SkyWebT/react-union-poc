@@ -1,4 +1,6 @@
-const init = {
+import { createActions, handleActions } from 'redux-actions';
+
+const defaultState = {
 	'1': {
 		id: '1',
 		name: 'SKY Starter',
@@ -19,16 +21,24 @@ const init = {
 	},
 };
 
-function products(state = init, action) {
-	switch (action.type) {
-		case 'TOGGLE':
-			const { id } = action.payload;
+const actions = createActions({
+	TOGGLE: id => ({ id }),
+});
+const { toggle } = actions;
+
+const reducer = handleActions(
+	{
+		[toggle]: (state, { payload: { id } }) => {
 			return {
 				...state,
 				[id]: { ...state[id], selected: !state[id].selected },
 			};
-		default:
-			return state;
-	}
-}
-export default products;
+		},
+	},
+	defaultState
+);
+
+export default {
+	reducer,
+	actions,
+};

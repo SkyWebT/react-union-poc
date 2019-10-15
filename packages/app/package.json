@@ -9,7 +9,6 @@
   "dependencies": {
     "@skytv/store": "*",
     "@skytv/widget-cart": "*",
-    "@skytv/widget-content": "*",
     "@skytv/widget-counter": "*",
     "@skytv/widget-hero": "*",
     "@skytv/widget-products": "*",

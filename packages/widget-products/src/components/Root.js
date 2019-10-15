@@ -1,15 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React from 'react';
-
+import { actions } from '@skytv/store';
 const Root = () => {
 	const products = useSelector(s => s.products);
-	const d = useDispatch();
+	const dispatch = useDispatch();
 	console.log(products);
 	const addToCart = id => {
-		d({
-			type: 'TOGGLE',
-			payload: { id },
-		});
+		dispatch(actions.prodducts.toggle(id));
 	};
 	return (
 		<div style={{ border: '1px solid grey', padding: 20, width: '40vw' }}>

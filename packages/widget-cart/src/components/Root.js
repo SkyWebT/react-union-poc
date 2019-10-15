@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React from 'react';
+import { actions } from '@skytv/store';
 
 const getSelected = state => Object.values(state.products).filter(p => p.selected);
 const getTotal = state => {
@@ -11,13 +12,10 @@ const getTotal = state => {
 };
 const Root = () => {
 	const { products, total } = useSelector(state => ({ products: getSelected(state), total: getTotal(state) }));
-	const d = useDispatch();
+	const dispatch = useDispatch();
 
 	const removeFromCart = id => {
-		d({
-			type: 'TOGGLE',
-			payload: { id },
-		});
+		dispatch(actions.prodducts.toggle(id));
 	};
 	return (
 		<div style={{ border: '1px solid grey', padding: 20, width: '40vw' }}>

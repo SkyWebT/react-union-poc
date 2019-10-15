@@ -6,10 +6,6 @@ export default [
 		component: universal(import('@skytv/widget-hero')),
 	},
 	{
-		path: 'content',
-		component: universal(import('@skytv/widget-content')),
-	},
-	{
 		path: 'counter',
 		component: universal(import('@skytv/widget-counter')),
 	},
