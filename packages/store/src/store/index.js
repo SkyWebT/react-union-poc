@@ -9,6 +9,6 @@ const reducers = combineReducers({ counter: counter.reducer, products: products.
 export const create = () => createStore(reducers, applyMiddleware(logger));
 
 export const actions = {
-	counter: counter.actions,
-	prodducts: products.actions,
+  counter: counter.actions,
+  prodducts: products.actions,
 };

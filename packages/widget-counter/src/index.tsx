@@ -1,9 +1,11 @@
-import { useSelector, useDispatch } from 'react-redux';
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { actions } from '@skytv/store';
+
 import style from './style.css';
 
-const Root = () => {
+const Root: React.FC = () => {
   const { counter } = useSelector(s => s.counter);
   const d = useDispatch();
   const inc = () => {

@@ -3,10 +3,10 @@ import { shallow } from 'enzyme';
 import Root from '../Root';
 
 describe('<Root />', () => {
-	const requiredProps = {};
+  const requiredProps = {};
 
-	it('should match snapshot', () => {
-		const wrapper = shallow(<Root {...requiredProps} />);
-		expect(wrapper).toMatchSnapshot();
-	});
+  it('should match snapshot', () => {
+    const wrapper = shallow(<Root {...requiredProps} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

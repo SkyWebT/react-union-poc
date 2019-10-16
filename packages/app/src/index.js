@@ -8,16 +8,16 @@ import Root from './components/Root';
 const store = create();
 
 const app = (
-	<Provider store={store}>
-		<Root />
-	</Provider>
+  <Provider store={store}>
+    <Root />
+  </Provider>
 );
 
 if ('Liferay' in window) {
-	window.Liferay.on('allPortletsReady', function() {
-		console.log('allPortletsReady !!!!!!!');
-		justRender(app);
-	});
+  window.Liferay.on('allPortletsReady', function() {
+    console.log('allPortletsReady !!!!!!!');
+    justRender(app);
+  });
 } else {
-	justRender(app);
+  justRender(app);
 }
