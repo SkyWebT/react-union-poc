@@ -1,27 +1,28 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 
 import { actions } from '@skytv/store';
 
 import style from './style.css';
 
-const Root: React.FC = () => {
-  const { counter } = useSelector(s => s.counter);
-  const d = useDispatch();
-  const inc = () => {
-    d(actions.counter.increment());
-  };
-  const dec = () => {
-    d(actions.counter.decrement());
-  };
+interface Props  {
+  counter:number;
+  increment:()=>void;
+  decrement:()=>void;
+}
+
+export const Counter: React.FC<Props> = ({ counter, increment, decrement }) => {
   return (
     <div className={style.counter}>
       <div>hello typescript counter</div>
       <div>{counter}</div>
-      <button onClick={inc}>+++</button>
-      <button onClick={dec}>---</button>
+      <button onClick={() => increment()}>+++</button>
+      <button onClick={() => decrement()}>---</button>
     </div>
   );
 };
 
-export default Root;
+export default connect(
+  s => s.counter,
+  actions.counter
+)(Counter);

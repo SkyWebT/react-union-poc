@@ -1,60 +1,68 @@
 {
-    "name": "react-union-monorepo",
-    "version": "0.0.1",
-    "private": true,
-    "license": "MIT",
-    "engines": {
-        "node": ">=8"
-    },
-    "workspaces": [
-        "packages/*"
+  "name": "react-union-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "@types/react": "^16.9.7",
+    "@types/react-dom": "^16.9.2",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.8.0",
+    "patch-package": "^6.2.0",
+    "postinstall-postinstall": "^2.0.0",
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "babel-core": "^7.0.0-bridge",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-preset-react-union": "^0.14.2",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.1",
+    "prettier": "^1.16.3",
+    "react-union-scripts": "^0.14.1"
+  },
+  "scripts": {
+    "build": "react-union-scripts build --app app --release",
+    "build:dev": "react-union-scripts build --app app",
+    "start": "react-union-scripts start --app app",
+    "test": "react-union-scripts test",
+    "lint": "yarn lint:eslint",
+    "lint:eslint": "eslint --ext .js ./packages"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --write",
+      "yarn lint --fix",
+      "git add"
+    ]
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ],
-    "dependencies": {
-        "@babel/preset-typescript": "^7.6.0",
-        "@types/jest": "^24.0.19",
-        "@types/node": "^12.11.1",
-        "@types/react": "^16.9.7",
-        "@types/react-dom": "^16.9.2",
-        "enzyme": "^3.8.0",
-        "enzyme-adapter-react-16": "^1.8.0",
-        "typescript": "^3.6.4"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.6.2",
-        "babel-core": "^7.0.0-bridge",
-        "babel-eslint": "^10.0.1",
-        "babel-plugin-dynamic-import-node": "^2.2.0",
-        "babel-preset-react-union": "^0.14.2",
-        "enzyme-to-json": "^3.3.5",
-        "eslint": "^6.4.0",
-        "eslint-config-prettier": "^6.4.0",
-        "eslint-plugin-babel": "^5.3.0",
-        "eslint-plugin-import": "^2.16.0",
-        "eslint-plugin-prettier": "^3.1.1",
-        "eslint-plugin-react": "^7.12.4",
-        "husky": "^3.0.8",
-        "lint-staged": "^9.4.1",
-        "prettier": "^1.16.3",
-        "react-union-scripts": "^0.14.1"
-    },
-    "scripts": {
-        "build": "react-union-scripts build --app app --release",
-        "build:dev": "react-union-scripts build --app app",
-        "start": "react-union-scripts start --app app",
-        "test": "react-union-scripts test",
-        "lint": "yarn lint:eslint",
-        "lint:eslint": "eslint --ext .js ./packages"
-    },
-    "lint-staged": {
-        "**/*.js": [
-            "prettier --write",
-            "yarn lint --fix",
-            "git add"
-        ]
-    },
-    "jest": {
-        "snapshotSerializers": [
-            "enzyme-to-json/serializer"
-        ]
-    }
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ts",
+      "tsx"
+    ]
+  }
 }

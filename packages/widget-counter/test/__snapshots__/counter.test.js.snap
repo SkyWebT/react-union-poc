@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter /> should match snapshot 1`] = `
+<div>
+  <div>
+    hello typescript counter
+  </div>
+  <div>
+    1
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    +++
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    ---
+  </button>
+</div>
+`;

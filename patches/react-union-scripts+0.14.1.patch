@@ -1,0 +1,30 @@
+diff --git a/node_modules/react-union-scripts/scripts/test.js b/node_modules/react-union-scripts/scripts/test.js
+index 36de59d..2a4a384 100644
+--- a/node_modules/react-union-scripts/scripts/test.js
++++ b/node_modules/react-union-scripts/scripts/test.js
+@@ -20,7 +20,7 @@ const supportedKeys = [
+ 	'resetMocks',
+ 	'resetModules',
+ 	'snapshotSerializers',
+-	'watchPathIgnorePatterns',
++	'watchPathIgnorePatterns','moduleFileExtensions'
+ ];
+ 
+ const pickSupported = pick(supportedKeys);
+@@ -59,7 +59,7 @@ create "testsSetup.js" file in root of your project.`
+ 			__DEV__: true,
+ 		},
+ 		transform: {
+-			'^.+\\.jsx?$': require.resolve('babel-jest'),
++			'^.+\\.(js|ts)x?$': require.resolve('babel-jest'),
+ 			'^.+\\.s?css$': resolveSymlink(__dirname, 'jest/scssTransformer.js'),
+ 			[filePattern]: resolveSymlink(__dirname, 'jest/fileTransformer.js'),
+ 		},
+@@ -85,7 +85,6 @@ function test() {
+ 		...(includeWatch ? ['--watchAll'] : []),
+ 		...['--config', JSON.stringify(getConfig(passedJestConfig))],
+ 	];
+-
+ 	return jest.run(jestOptions);
+ }
+ 

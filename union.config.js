@@ -3,7 +3,6 @@ module.exports = options => {
   const { script } = options;
   return {
     mergeWebpackConfig: config => {
-      console.log(config.module.rules[0]);
       // config ts
       config.module.rules[0].test = /\.(js|ts)x?$/;
       config.resolve = { extensions: ['.js', '.ts', '.tsx'] };
