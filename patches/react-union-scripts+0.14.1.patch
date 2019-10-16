@@ -1,5 +1,5 @@
 diff --git a/node_modules/react-union-scripts/scripts/test.js b/node_modules/react-union-scripts/scripts/test.js
-index 36de59d..2a4a384 100644
+index 36de59d..0d7139f 100644
 --- a/node_modules/react-union-scripts/scripts/test.js
 +++ b/node_modules/react-union-scripts/scripts/test.js
 @@ -20,7 +20,7 @@ const supportedKeys = [
@@ -11,7 +11,7 @@ index 36de59d..2a4a384 100644
  ];
  
  const pickSupported = pick(supportedKeys);
-@@ -59,7 +59,7 @@ create "testsSetup.js" file in root of your project.`
+@@ -59,12 +59,12 @@ create "testsSetup.js" file in root of your project.`
  			__DEV__: true,
  		},
  		transform: {
@@ -20,6 +20,12 @@ index 36de59d..2a4a384 100644
  			'^.+\\.s?css$': resolveSymlink(__dirname, 'jest/scssTransformer.js'),
  			[filePattern]: resolveSymlink(__dirname, 'jest/fileTransformer.js'),
  		},
+ 		rootDir,
+-		setupTestFrameworkScriptFile: setupTestsFile,
++		setupFilesAfterEnv: [setupTestsFile],
+ 		moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node'],
+ 		transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
+ 		...sanitizedConfig,
 @@ -85,7 +85,6 @@ function test() {
  		...(includeWatch ? ['--watchAll'] : []),
  		...['--config', JSON.stringify(getConfig(passedJestConfig))],
