@@ -22,7 +22,7 @@ const defaultState = {
 };
 
 const actions = createActions({
-  TOGGLE: id => ({ id }),
+  TOGGLE: (id:string) => ({ id }),
 });
 const { toggle } = actions;
 

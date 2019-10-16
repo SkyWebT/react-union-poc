@@ -1,10 +1,12 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
 import logger from 'redux-logger';
 
-import products from './products';
 import counter from './counter';
+import products from './products';
 
 const reducers = combineReducers({ counter: counter.reducer, products: products.reducer });
+
+export type AppState = ReturnType<typeof reducers>
 
 export const create = () => createStore(reducers, applyMiddleware(logger));
 

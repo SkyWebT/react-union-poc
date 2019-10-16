@@ -1,4 +1,4 @@
-import { createActions, handleActions, combineActions } from 'redux-actions';
+import { combineActions, createActions, handleActions } from 'redux-actions';
 
 const defaultState = { counter: 10 };
 

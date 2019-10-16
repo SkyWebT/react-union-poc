@@ -1,14 +1,14 @@
 import React from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 
-import { actions } from '@skytv/store';
+import { actions, AppState } from '@skytv/store';
 
 import style from './style.css';
 
-interface Props  {
-  counter:number;
-  increment:()=>void;
-  decrement:()=>void;
+interface Props {
+  counter: number;
+  increment: () => void;
+  decrement: () => void;
 }
 
 export const Counter: React.FC<Props> = ({ counter, increment, decrement }) => {
@@ -23,6 +23,6 @@ export const Counter: React.FC<Props> = ({ counter, increment, decrement }) => {
 };
 
 export default connect(
-  s => s.counter,
+  (s: AppState) => s.counter,
   actions.counter
 )(Counter);
