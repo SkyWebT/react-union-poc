@@ -12,9 +12,6 @@ interface Props {
 }
 
 export const Counter: React.FC<Props> = ({ counter, increment, decrement }) => {
-  if(counter==1){
-    throw 'err'
-  }
   return (
     <div className={style.counter}>
       <div>hello typescript counter</div>
