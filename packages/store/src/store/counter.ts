@@ -1,23 +1,12 @@
-import { combineActions, createActions, handleActions } from 'redux-actions';
+import { createSlice } from 'redux-starter-kit';
 
-const defaultState = { counter: 10 };
-
-const actions = createActions({
-  INCREMENT: (amount = 1) => ({ amount }),
-  DECREMENT: (amount = 1) => ({ amount: -amount }),
-});
-const { increment, decrement } = actions;
-
-const reducer = handleActions(
-  {
-    [combineActions(increment, decrement)]: (state, { payload: { amount } }) => {
-      return { ...state, counter: state.counter + amount };
-    },
+const counter = createSlice({
+  name: 'counter',
+  initialState: 0,
+  reducers: {
+    increment: state => state + 1,
+    decrement: state => state - 1,
   },
-  defaultState
-);
+});
 
-export default {
-  reducer,
-  actions,
-};
+export default counter;

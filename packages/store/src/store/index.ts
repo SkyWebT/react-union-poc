@@ -1,14 +1,17 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux';
+import { combineReducers } from 'redux';
 import logger from 'redux-logger';
+import { configureStore } from 'redux-starter-kit';
 
 import counter from './counter';
 import products from './products';
 
-const reducers = combineReducers({ counter: counter.reducer, products: products.reducer });
+const reducer = { counter: counter.reducer, products: products.reducer };
+const reducerFunc = combineReducers(reducer);
+export type AppState = ReturnType<typeof reducerFunc>;
 
-export type AppState = ReturnType<typeof reducers>
+const middleware = [logger];
 
-export const create = () => createStore(reducers, applyMiddleware(logger));
+export const create = () => configureStore({ reducer, middleware, devTools: true });
 
 export const actions = {
   counter: counter.actions,

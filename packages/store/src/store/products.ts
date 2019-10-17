@@ -1,6 +1,8 @@
-import { createActions, handleActions } from 'redux-actions';
+import { createSlice, PayloadAction } from 'redux-starter-kit';
 
-const defaultState = {
+import { T_Products } from '../types';
+
+const defaultState:T_Products = {
   '1': {
     id: '1',
     name: 'SKY Starter',
@@ -21,24 +23,14 @@ const defaultState = {
   },
 };
 
-const actions = createActions({
-  TOGGLE: (id:string) => ({ id }),
-});
-const { toggle } = actions;
-
-const reducer = handleActions(
-  {
-    [toggle]: (state, { payload: { id } }) => {
-      return {
-        ...state,
-        [id]: { ...state[id], selected: !state[id].selected },
-      };
-    },
+const counter = createSlice({
+  name: 'product',
+  initialState: defaultState,
+  reducers: {
+    toggle: (state, action:PayloadAction<string>) => {
+      state[action.payload].selected = !state[action.payload].selected;
+    } ,
   },
-  defaultState
-);
+});
 
-export default {
-  reducer,
-  actions,
-};
+export default counter;

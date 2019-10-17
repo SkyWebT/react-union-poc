@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Root /> should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    style="border: 1px solid grey; padding: 20px; width: 40vw;"
+  >
+    <h2>
+      Product list
+    </h2>
+    <div
+      style="display: flex; justify-content: space-between;"
+    >
+      <h3>
+        SKY Starter - $125
+      </h3>
+      <div>
+        <button>
+          buy
+        </button>
+      </div>
+    </div>
+    <div
+      style="display: flex; justify-content: space-between;"
+    >
+      <h3>
+        SKY Entertainment - $35
+      </h3>
+      <div>
+        <button>
+          buy
+        </button>
+      </div>
+    </div>
+    <div
+      style="display: flex; justify-content: space-between;"
+    >
+      <h3>
+        SKY Sport - $99
+      </h3>
+      <div>
+        <button>
+          buy
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
