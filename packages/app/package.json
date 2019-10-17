@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@skytv/store": "*",
+    "@skytv/component-error-boundary": "*",
     "@skytv/widget-cart": "*",
     "@skytv/widget-counter": "*",
     "@skytv/widget-hero": "*",

@@ -12,10 +12,14 @@ interface Props {
 }
 
 export const Counter: React.FC<Props> = ({ counter, increment, decrement }) => {
+  if(counter==1){
+    throw 'err'
+  }
   return (
     <div className={style.counter}>
       <div>hello typescript counter</div>
       <div>{counter}</div>
+
       <button onClick={increment}>+++</button>
       <button onClick={decrement}>---</button>
     </div>
@@ -23,6 +27,6 @@ export const Counter: React.FC<Props> = ({ counter, increment, decrement }) => {
 };
 
 export default connect(
-  (s: AppState) => ({counter:s.counter}),
+  (s: AppState) => ({ counter: s.counter }),
   actions.counter
 )(Counter);
