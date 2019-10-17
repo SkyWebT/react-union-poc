@@ -1,9 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { justRender } from 'react-union';
+
 import { create } from '@skytv/store';
 
-import Root from './components/Root';
+import Root from './Root';
 
 const store = create();
 
@@ -13,6 +14,11 @@ const app = (
   </Provider>
 );
 
+declare global {
+  interface Window {
+    Liferay: any;
+  }
+}
 if ('Liferay' in window) {
   window.Liferay.on('allPortletsReady', function() {
     console.log('allPortletsReady !!!!!!!');
