@@ -4,7 +4,7 @@ exports[`<Counter /> should match snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div>
-      hello typescript counter
+      this is typescript counter
     </div>
     <div>
       1
