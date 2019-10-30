@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { justRender } from 'react-union';
 
-import { create } from '@skytv/store';
+import { create } from '@sky/store';
 
 import Root from './Root';
 

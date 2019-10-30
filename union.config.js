@@ -1,11 +1,15 @@
 module.exports = options => {
-  console.log(options);
   const { script } = options;
   return {
     mergeWebpackConfig: config => {
       // config ts
       config.module.rules[0].test = /\.(js|ts)x?$/;
-      config.resolve = { extensions: ['.js', '.ts', '.tsx'] };
+      config.resolve = {
+        extensions: ['.js', '.ts', '.tsx'],
+        alias: {
+          'react-native$': 'react-native-web',
+        },
+      };
       // bundle into one js file
       config.optimization = {};
       // needs to match the theme directory

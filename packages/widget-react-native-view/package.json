@@ -1,5 +1,5 @@
 {
-  "name": "@sky/widget-cart",
+  "name": "@sky/widget-react-native-view",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
@@ -8,10 +8,11 @@
     "node": ">=8"
   },
   "dependencies": {
+    "@sky/store": "*",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-redux": "^7.1.1",
-    "redux-starter-kit": "^0.8.1",
-    "@sky/store": "*"
-  }
+    "react-native-web": "^0.11.7",
+    "react-redux": "^7.1.1"
+  },
+  "devDependencies": {}
 }

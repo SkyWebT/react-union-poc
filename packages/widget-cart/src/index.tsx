@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createSelector, PayloadActionCreator } from 'redux-starter-kit';
 
-import { actions, AppState, T_Product } from '@skytv/store';
+import { actions, AppState, T_Product } from '@sky/store';
 
 const selectSelected = (state: AppState) => Object.values(state.products).filter(p => p.selected);
 

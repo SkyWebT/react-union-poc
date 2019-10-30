@@ -1,12 +1,8 @@
 {
-  "name": "@sky/component-error-boundary",
+  "name": "@sky/component-primitives",
   "version": "0.0.1",
   "private": true,
-  "license": "MIT",
   "main": "src/index.tsx",
-  "engines": {
-    "node": ">=8"
-  },
   "dependencies": {
     "react": "^16.8.3"
   }

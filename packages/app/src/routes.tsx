@@ -1,6 +1,7 @@
-import universal from 'react-universal-component';
 import React from 'react';
-import ErrorBoundary from '@skytv/component-error-boundary';
+import universal from 'react-universal-component';
+
+import ErrorBoundary from '@sky/component-error-boundary';
 
 const enhance = routes => {
   return routes.map(route => {
@@ -20,21 +21,29 @@ const enhance = routes => {
 const routes = [
   {
     path: 'hero',
-    component: universal(import('@skytv/widget-hero')),
+    component: universal(import('@sky/widget-hero')),
   },
   {
     path: 'counter',
-    component: universal(import('@skytv/widget-counter')),
+    component: universal(import('@sky/widget-counter')),
   },
 
   {
     path: 'products',
-    component: universal(import('@skytv/widget-products')),
+    component: universal(import('@sky/widget-products')),
   },
 
   {
     path: 'cart',
-    component: universal(import('@skytv/widget-cart')),
+    component: universal(import('@sky/widget-cart')),
+  },
+  {
+    path: 'rn',
+    component: universal(import('@sky/widget-react-native-view')),
+  },
+  {
+    path: 'playground',
+    component: universal(import('@sky/widget-playground')),
   },
 ];
 

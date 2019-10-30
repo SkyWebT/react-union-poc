@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { actions, AppState } from '@skytv/store';
+import { actions, AppState } from '@sky/store';
 
 import style from './style.css';
 
@@ -14,7 +14,7 @@ interface Props {
 export const Counter: React.FC<Props> = ({ counter, increment, decrement }) => {
   return (
     <div className={style.counter}>
-      <div>hello typescript counter</div>
+      <div>this is typescript counter</div>
       <div>{counter}</div>
 
       <button onClick={increment}>+++</button>

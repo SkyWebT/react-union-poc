@@ -1,13 +1,11 @@
 {
-  "name": "@sky/widget-counter",
+  "name": "@sky/widget-playground",
   "version": "0.0.1",
   "private": true,
-  "license": "MIT",
   "main": "src/index.tsx",
   "dependencies": {
-    "@sky/store": "*",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-redux": "^7.1.1"
+    "@sky/component-primitives": "*"
   }
 }
